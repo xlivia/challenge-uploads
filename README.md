@@ -1,2 +1,5 @@
-# challenge-uploads
-This is Olivia's homework repository
+# Olivia Bryant's UofT Data Analytics Bootcamp Modules Challenges
+
+## challenge-uploads
+1. excel-challenge
+2. VBA-challenge
