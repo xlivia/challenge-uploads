@@ -4,6 +4,7 @@ fpath ="Resources/budget_data.csv" # file path
 
 total_months = 0
 total_price = 0
+prices = []
 changes = []
 dates = []
 curr = 0
@@ -18,18 +19,19 @@ with open(fpath, 'r') as csvfile:
         total_months += 1 # add the total months
         dates.append(row[0]) # add the dates to the list
         total_price += int(row[1]) # add the total price
+        prices.append(int(row[1])) # add the profit prices to the list
         curr = int(row[1])
         if (total_months != 1):
             curr_change = curr - prev
             changes.append(curr_change) # add the price changes to the list
         prev = int(row[1])
 
-average_change = sum(changes) / len(changes)
+average_change = sum(changes) / len(changes) # find average change
 
-greatest_inc = max(changes)
-greatest_dec = min(changes)
-greatest_inc_date = dates[changes.index(greatest_inc)]
-greatest_dec_date = dates[changes.index(greatest_dec)]
+greatest_inc = max(changes) # find max
+greatest_dec = min(changes) # find min
+greatest_inc_date = dates[changes.index(greatest_inc) + 1] # plus 1 to account for the index
+greatest_dec_date = dates[changes.index(greatest_dec) + 1] # plus 1 to account for the index
 
 # Output The Results To A File
 

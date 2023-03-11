@@ -44,13 +44,16 @@ with open(output_file, 'w') as outputfile:
 
 print("Election Results")
 print("-------------------------")
-print(f"Total Votes: {total_votes}")
+print(f"Total Votes: {total_votes}") # 369711
 print("-------------------------")
 
 for candidate, votes in candidates.items():
     votes_percent = votes / total_votes * 100
     print(f"{candidate}: {votes_percent:.3f}% ({votes})")
+    # Charles Casper Stockham: 23.049% (85213)
+    # Diana DeGette: 73.812% (272892)
+    # Raymon Anthony Doane: 3.139% (11606)
 
 print("-------------------------")
-print(f"Winner: {winner}")
+print(f"Winner: {winner}") # Diana DeGette
 print("-------------------------")
