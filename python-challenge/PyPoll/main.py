@@ -22,31 +22,35 @@ for candidate, votes in candidates.items():
         max_votes = votes
         winner = candidate
 
+# Output The Results To A File
+
+output_file = "analysis/results.txt"
+
+with open(output_file, 'w') as outputfile:
+    outputfile.write("Election Results\n")
+    outputfile.write("-------------------------\n")
+    outputfile.write(f"Total Votes: {total_votes}\n")
+    outputfile.write("-------------------------\n")
+
+    for candidate, votes in candidates.items():
+        votes_percent = votes / total_votes * 100
+        outputfile.write(f"{candidate}: {votes_percent:.3f}% ({votes})\n")
+
+    outputfile.write("-------------------------\n")
+    outputfile.write(f"Winner: {winner}\n")
+    outputfile.write("-------------------------")
+
 # Print Statements
 
 print("Election Results")
 print("-------------------------")
 print(f"Total Votes: {total_votes}")
 print("-------------------------")
+
 for candidate, votes in candidates.items():
-    percentage = votes / total_votes * 100
-    print(f"{candidate}: {percentage:.3f}% ({votes})")
+    votes_percent = votes / total_votes * 100
+    print(f"{candidate}: {votes_percent:.3f}% ({votes})")
+
 print("-------------------------")
 print(f"Winner: {winner}")
 print("-------------------------")
-
-# Output The Results To A File
-
-output_file = "analysis/election_results.txt"
-
-with open(output_file, 'w') as outfile:
-    outfile.write("Election Results\n")
-    outfile.write("-------------------------\n")
-    outfile.write(f"Total Votes: {total_votes}\n")
-    outfile.write("-------------------------\n")
-    for candidate, votes in candidates.items():
-        percentage = votes / total_votes * 100
-        outfile.write(f"{candidate}: {percentage:.3f}% ({votes})\n")
-    outfile.write("-------------------------\n")
-    outfile.write(f"Winner: {winner}\n")
-    outfile.write("-------------------------")

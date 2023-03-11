@@ -1,54 +1,48 @@
-# budget_data.csv
-
 import csv
 
+fpath ="Resources/budget_data.csv" # file path
+
 total_months = 0
-
 total_price = 0
+changes = []
+dates = []
 
-diff_change = []
-average_change = 0.00
-
-greatest_inc = ""
-greatest_dec = ""
-max_profit_price = 0
-min_profit_price = 0
-
-fpath ="Resources/budget_data.csv" # file "Resources/buget_data.csv"
-
-prev = 0
-curr = 0
-
+# Read in the CSV file
 with open(fpath, 'r') as csvfile:
-
     csvreader = csv.reader(csvfile, delimiter=',') # make the csv file readable
-    next(csvreader, None) # skip the header row
-
+    next(csvreader) # skip the header row
     for row in csvreader: # loop through each row of csv file
-
         total_months += 1 # add the total months
-
+        dates.append(row[0]) # add the dates to the list
         total_price += int(row[1]) # add the total price
+        changes.append(int(row[1])) # add the price changes to the list
 
-        curr = int(row[1]) # set current price
-        total_change = curr - prev # find price difference of each
-        diff_change.append(int(total_change)) # add each price difference to list
-        average_change = total_change / total_months # calculate average change
-        prev = curr # set previous price after calculations
+average_change = sum(changes) / len(changes)
 
-        if (max_profit_price < int(row[1])):
-            max_profit_price = int(row[1])
-            greatest_inc = row[0] + " (" + str(max_profit_price) + ")"
-        if (min_profit_price > int(row[1])):
-            min_profit_price = int(row[1])
-            greatest_dec = row[0] + " (" + str(min_profit_price) + ")"
+greatest_inc = max(changes)
+greatest_dec = min(changes)
+greatest_inc_date = dates[changes.index(greatest_inc)]
+greatest_dec_date = dates[changes.index(greatest_dec)]
 
-# Print Outputs
+# Output The Results To A File
+
+output_file = "analysis/results.txt"
+
+with open(output_file, 'w') as outputfile:
+    outputfile.write("Financial Analysis\n")
+    outputfile.write("----------------------------\n")
+    outputfile.write(f"Total Months: {total_months}\n")
+    outputfile.write(f"Total: ${total_price}\n")
+    outputfile.write(f"Average Change: ${average_change:.2f}\n")
+    outputfile.write(f"Greatest Increase in Profits: {greatest_inc_date} (${greatest_inc})\n")
+    outputfile.write(f"Greatest Decrease in Profits: {greatest_dec_date} (${greatest_dec})")
+
+# Print Statements
 
 print("Financial Analysis")
 print("----------------------------")
-print(f"Total Months: {total_months}") # 86
+print(f"Total Months: {total_months}") #86
 print(f"Total: ${total_price}") # 22564198
-print(f"Average Change: ${average_change}") # -8311.11
-print(f"Greatest Increase in Profits: {greatest_inc}") # Aug-16 ($1862002)
-print(f"Greatest Decrease in Profits: {greatest_dec}") # Feb-14 ($-1825558)
+print(f"Average Change: ${average_change:.2f}") # -8311.11
+print(f"Greatest Increase in Profits: {greatest_inc_date} (${greatest_inc})") # Aug-16 ($1862002)
+print(f"Greatest Decrease in Profits: {greatest_dec_date} (${greatest_dec})") # Feb-14 ($-1825558)
