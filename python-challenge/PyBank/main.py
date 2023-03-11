@@ -6,6 +6,9 @@ total_months = 0
 total_price = 0
 changes = []
 dates = []
+curr = 0
+prev = 0
+curr_change = 0
 
 # Read in the CSV file
 with open(fpath, 'r') as csvfile:
@@ -15,7 +18,11 @@ with open(fpath, 'r') as csvfile:
         total_months += 1 # add the total months
         dates.append(row[0]) # add the dates to the list
         total_price += int(row[1]) # add the total price
-        changes.append(int(row[1])) # add the price changes to the list
+        curr = int(row[1])
+        if (total_months != 1):
+            curr_change = curr - prev
+            changes.append(curr_change) # add the price changes to the list
+        prev = int(row[1])
 
 average_change = sum(changes) / len(changes)
 
