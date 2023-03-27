@@ -6,3 +6,4 @@
 3. python-challenge
 4. pandas-challenge
 5. matplotlib-challenge
+6. python-api-challenge
