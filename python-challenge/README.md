@@ -6,13 +6,13 @@ Result files are in the analysis folders.
 Database .csv files are in the Resources folders.
 
 
-## Background
+### Background
 
 It's time to put away the Excel sheet and join the big leagues. Welcome to the world of programming with Python. In this homework assignment, you'll use the concepts you've learned to complete the **two** Python challenges, PyBank and PyPoll.
 
 Both of these challenges present a real-world situation where your newfound Python scripting skills can come in handy. These challenges aren't easy, so expect some hard work ahead!
 
-## Setup
+### Setup
 
 Before starting the assignment, be sure to do the following:
 
@@ -30,7 +30,7 @@ Before starting the assignment, be sure to do the following:
 
 * Push these changes to GitHub or GitLab.
 
-## PyBank Instructions
+### PyBank Instructions
 
 In this challenge, you are tasked with creating a Python script to analyze the financial records of your company. You will give a set of financial data called [budget_data.csv](PyBank/Resources/budget_data.csv). The dataset is composed of two columns: "Date" and "Profit/Losses". (Thankfully, your company has rather lax standards for accounting, so the records are simple.)
 
@@ -60,7 +60,7 @@ Your analysis should look similar to the following:
 
 In addition, your final script should both print the analysis to the terminal and export a text file with the results.
 
-## PyPoll Instructions
+### PyPoll Instructions
 
 In this challenge, you are tasked with helping a small, rural town modernize its vote counting process.
 
@@ -94,7 +94,7 @@ Your analysis should look similar to the following:
 
 In addition, your final script should both print the analysis to the terminal and export a text file with the results.
 
-## Hints and Considerations
+### Hints and Considerations
 
 * Consider what you've learned so far. You've learned how to import modules like `csv`; to read and write files in various formats; to store contents in variables, lists, and dictionaries; to iterate through basic data structures; and to debug along the way. Using what you've learned, try to break down your tasks into discrete mini-objectives. 
 
