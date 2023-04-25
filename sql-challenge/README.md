@@ -11,8 +11,7 @@
 
 ## Run The Code
 1.  To create a populate the tables:
-    - `psql -U postgres -d employee -f schema.sql`
-    - *****Note: Make sure you are in the appropriate directory (`EmployeeSQL/`) to run the file.***
+    - `psql -U postgres -d employee -f EmployeeSQL/schema.sql`
 2. To connect to the database:
     - `psql -h localhost -U postgres -d employee`
 3. Enter postgres password:
@@ -25,6 +24,10 @@
     - `SELECT * FROM employees;`
     - `SELECT * FROM salaries;`
     - `SELECT * FROM titles;`
+6. Run assignment queries:
+    - queries located in the `EmployeeSQL/queries.sql` file
+7. To quit the database:
+    - `\q`
 
 ## Background
 It’s been two weeks since you were hired as a new data engineer at Pewlett Hackard (a fictional company).
