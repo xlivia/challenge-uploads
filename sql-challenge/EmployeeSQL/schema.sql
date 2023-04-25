@@ -1,53 +1,58 @@
--- Create the employees table
-CREATE TABLE employees (
-    emp_no INT PRIMARY KEY,
-    first_name VARCHAR(50),
-    last_name VARCHAR(50),
-    gender CHAR(1),
-    birth_date DATE,
-    hire_date DATE
+-- titles table
+CREATE TABLE titles (
+    title_id CHAR(10) PRIMARY KEY,
+    title VARCHAR(100) NOT NULL
 );
 
--- Create the departments table
+\copy titles FROM 'data/titles.csv' DELIMITER ',' CSV HEADER;
+
+-- departments table
 CREATE TABLE departments (
     dept_no CHAR(4) PRIMARY KEY,
-    dept_name VARCHAR(100)
+    dept_name VARCHAR(100) NOT NULL
 );
 
--- Create the dept_emp table
-CREATE TABLE dept_emp (
-    emp_no INT,
-    dept_no CHAR(4),
-    from_date DATE,
-    to_date DATE,
-    FOREIGN KEY (emp_no) REFERENCES employees (emp_no),
-    FOREIGN KEY (dept_no) REFERENCES departments (dept_no)
+\copy departments FROM 'data/departments.csv' DELIMITER ',' CSV HEADER;
+
+-- employees table
+CREATE TABLE employees (
+    emp_no INT PRIMARY KEY,
+    emp_title_id CHAR(10) NOT NULL,
+    birth_date DATE NOT NULL,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    sex CHAR(1) NOT NULL,
+    hire_date DATE NOT NULL,
+    FOREIGN KEY (emp_title_id) REFERENCES titles (title_id)
 );
 
--- Create the dept_manager table
-CREATE TABLE dept_manager (
-    emp_no INT,
-    dept_no CHAR(4),
-    from_date DATE,
-    to_date DATE,
-    FOREIGN KEY (emp_no) REFERENCES employees (emp_no),
-    FOREIGN KEY (dept_no) REFERENCES departments (dept_no)
-);
+\copy employees FROM 'data/employees.csv' DELIMITER ',' CSV HEADER;
 
--- Create the salaries table
+-- salaries table
 CREATE TABLE salaries (
     emp_no INT,
     salary INT,
-    from_date DATE,
-    to_date DATE,
     FOREIGN KEY (emp_no) REFERENCES employees (emp_no)
 );
 
--- Create the titles table
-CREATE TABLE titles (
+\copy salaries FROM 'data/salaries.csv' DELIMITER ',' CSV HEADER;
+
+-- dept_emp table
+CREATE TABLE dept_emp (
     emp_no INT,
-    title VARCHAR(50),
-    from_date DATE,
-    to_date DATE,
-    FOREIGN KEY (emp_no) REFERENCES employees (emp_no)
+    dept_no CHAR(4),
+    FOREIGN KEY (emp_no) REFERENCES employees (emp_no),
+    FOREIGN KEY (dept_no) REFERENCES departments (dept_no)
 );
+
+\copy dept_emp FROM 'data/dept_emp.csv' DELIMITER ',' CSV HEADER;
+
+-- dept_manager table
+CREATE TABLE dept_manager (
+    dept_no CHAR(4),
+    emp_no INT,
+    FOREIGN KEY (emp_no) REFERENCES employees (emp_no),
+    FOREIGN KEY (dept_no) REFERENCES departments (dept_no)
+);
+
+\copy dept_manager FROM 'data/dept_manager.csv' DELIMITER ',' CSV HEADER;
