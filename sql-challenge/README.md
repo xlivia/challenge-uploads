@@ -3,11 +3,12 @@
 
 ### Table of Contents
 1. [Run The Code](#run-the-code)
-2. [Background](#background)
-3. [Before You Begin](#before-you-begin)
-4. [Instructions](#instructions)
-5. [Data Modeling](#data-modeling)
-6. [Data Engineering](#data-engineering)
+2. [File Structure](#file-structure)
+3. [Background](#background)
+4. [Before You Begin](#before-you-begin)
+5. [Instructions](#instructions)
+6. [Data Modeling](#data-modeling)
+7. [Data Engineering](#data-engineering)
 
 ## Run The Code
 1.  To create a populate the tables:
@@ -27,6 +28,27 @@
     - queries located in the `EmployeeSQL/queries.sql` file
 6. To quit the database:
     - `\q`
+
+## File Structure
+sql-challenge/
+│
+├── data/
+│   ├── departments.csv
+│   ├── dept_emp.csv
+│   ├── dept_manager.csv
+│   ├── employees.csv
+│   ├── salaries.csv
+│   └── titles.csv
+│
+├── EmployeeSQL/
+│   ├── schema.sql # SQL file with table schemata
+│   └── queries.sql # SQL file with queries for data analysis
+│
+├── erd/
+│   ├── ERD.png # Entity Relationship Diagram image file
+│   └── quickdbd-erd.txt # Text for the input on the quick database diagrams website
+│
+└── README.md # Overall README file for the project
 
 ## Background
 It’s been two weeks since you were hired as a new data engineer at Pewlett Hackard (a fictional company).
