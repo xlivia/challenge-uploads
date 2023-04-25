@@ -1,6 +1,10 @@
 # Olivia's SQL Assignment
 ## UofT Data Analytics Bootcamp Module 9 Challenge
 
+### Table of Contents
+1. (Background)[#Background]
+2. (Before You Begin)[#Before-You-Begin]
+
 ## Background
 It’s been two weeks since you were hired as a new data engineer at Pewlett Hackard (a fictional company).
 Your first major task is to do a research project about people whom the company employed during the 1980s and 1990s.
