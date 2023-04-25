@@ -2,12 +2,28 @@
 ## UofT Data Analytics Bootcamp Module 9 Challenge
 
 ### Table of Contents
-1. [Background](#background)
-2. [Before You Begin](#before-you-begin)
-3. [Instructions](#instructions)
-4. [Data Modeling](#data-modeling)
-5. [Data Engineering](#data-engineering)
-6. [Run The Code](#run-the-code)
+1. [Run The Code](#run-the-code)
+2. [Background](#background)
+3. [Before You Begin](#before-you-begin)
+4. [Instructions](#instructions)
+5. [Data Modeling](#data-modeling)
+6. [Data Engineering](#data-engineering)
+
+## Run The Code
+1.  To create a populate the tables:
+    - `psql -U postgres -d employee -f schema.sql`
+2. To connect to the database:
+    - `psql -h localhost -U postgres -d employee`
+3. Enter postgres password:
+4. To view all tables in database:
+    - `\dt`
+5. To view tables contents:
+    - `SELECT * FROM departments;`
+    - `SELECT * FROM dept_emp;`
+    - `SELECT * FROM dept_manager;`
+    - `SELECT * FROM employees;`
+    - `SELECT * FROM salaries;`
+    - `SELECT * FROM titles;`
 
 ## Background
 It’s been two weeks since you were hired as a new data engineer at Pewlett Hackard (a fictional company).
@@ -53,26 +69,7 @@ Import each CSV file into its corresponding SQL table.
 8. List the frequency counts, in descending order, of all the employee last names (that is, how many employees share each last name).
 
 
-## Run The Code
 
-1.  To create a populate the tables:
-    - `psql -U postgres -d employee -f schema.sql`
-
-2. To connect to the database:
-    - `psql -h localhost -U postgres -d employee`
-
-3. Enter postgres password:
-
-4. To view all tables in database:
-    - `\dt`
-
-5. To view tables contents:
-    - `SELECT * FROM departments;`
-    - `SELECT * FROM dept_emp;`
-    - `SELECT * FROM dept_manager;`
-    - `SELECT * FROM employees;`
-    - `SELECT * FROM salaries;`
-    - `SELECT * FROM titles;`
 
 
 
