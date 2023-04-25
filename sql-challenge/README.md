@@ -2,8 +2,12 @@
 ## UofT Data Analytics Bootcamp Module 9 Challenge
 
 ### Table of Contents
-1. (Background)[#Background]
-2. (Before You Begin)[#Before-You-Begin]
+1. [Background](#background)
+2. [Before You Begin](#before-you-begin)
+3. [Instructions](#instructions)
+4. [Data Modeling](#data-modeling)
+5. [Data Engineering](#data-engineering)
+6. [Run The Code](#run-the-code)
 
 ## Background
 It’s been two weeks since you were hired as a new data engineer at Pewlett Hackard (a fictional company).
@@ -49,7 +53,7 @@ Import each CSV file into its corresponding SQL table.
 8. List the frequency counts, in descending order, of all the employee last names (that is, how many employees share each last name).
 
 
-## Run the Code
+## Run The Code
 
 1.  To create a populate the tables:
     - `psql -U postgres -d employee -f schema.sql`
@@ -69,3 +73,7 @@ Import each CSV file into its corresponding SQL table.
     - `SELECT * FROM employees;`
     - `SELECT * FROM salaries;`
     - `SELECT * FROM titles;`
+
+
+
+[Back To Top](#olivias-sql-assignment)
