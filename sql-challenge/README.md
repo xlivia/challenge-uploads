@@ -14,19 +14,18 @@
     - `psql -U postgres -d employee -f EmployeeSQL/schema.sql`
 2. To connect to the database:
     - `psql -h localhost -U postgres -d employee`
-3. Enter postgres password:
-4. To view all tables in database:
+3. To view all tables in database:
     - `\dt`
-5. To view tables contents:
+4. To view tables contents:
     - `SELECT * FROM departments;`
     - `SELECT * FROM dept_emp;`
     - `SELECT * FROM dept_manager;`
     - `SELECT * FROM employees;`
     - `SELECT * FROM salaries;`
     - `SELECT * FROM titles;`
-6. Run assignment queries:
+5. Run assignment queries:
     - queries located in the `EmployeeSQL/queries.sql` file
-7. To quit the database:
+6. To quit the database:
     - `\q`
 
 ## Background
