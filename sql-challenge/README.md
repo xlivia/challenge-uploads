@@ -30,6 +30,7 @@
     - `\q`
 
 ## File Structure
+```
 sql-challenge/
 │
 ├── data/
@@ -49,6 +50,7 @@ sql-challenge/
 │   └── quickdbd-erd.txt # Text for the input on the quick database diagrams website
 │
 └── README.md # Overall README file for the project
+```
 
 ## Background
 It’s been two weeks since you were hired as a new data engineer at Pewlett Hackard (a fictional company).
