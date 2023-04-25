@@ -42,14 +42,14 @@ sql-challenge/
 │   └── titles.csv
 │
 ├── EmployeeSQL/
-│   ├── schema.sql # SQL file with table schemata
-│   └── queries.sql # SQL file with queries for data analysis
+│   ├── schema.sql              # SQL file with table schemata
+│   └── queries.sql             # SQL file with queries for data analysis
 │
 ├── erd/
-│   ├── ERD.png # Entity Relationship Diagram image file
-│   └── quickdbd-erd.txt # Text for the input on the quick database diagrams website
+│   ├── ERD.png                 # Entity Relationship Diagram image file
+│   └── quickdbd-erd.txt        # Text for the input on the quick database diagrams website
 │
-└── README.md # Overall README file for the project
+└── README.md                   # Overall README file for the project
 ```
 
 ## Background
