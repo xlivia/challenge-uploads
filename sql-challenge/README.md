@@ -12,6 +12,7 @@
 ## Run The Code
 1.  To create a populate the tables:
     - `psql -U postgres -d employee -f schema.sql`
+    - * **Note**: Make sure you are in the appropriate directory to run the files. *
 2. To connect to the database:
     - `psql -h localhost -U postgres -d employee`
 3. Enter postgres password:
