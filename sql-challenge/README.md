@@ -11,7 +11,7 @@ For this project, you’ll design the tables to hold the data from the CSV files
 ## Before You Begin
 1. Create a new repository for this project called sql-challenge. Do not add this assignment to an existing repository.
 2. Clone the new repository to your computer.
-3. Inside your local Git repository, create a directory for this Challenge. Use a folder name that corresponds to the Challenge, such as ```EmployeeSQL```.
+3. Inside your local Git repository, create a directory for this Challenge. Use a folder name that corresponds to the Challenge, such as `EmployeeSQL`.
 
 **Note:** You’ll add your files to this folder and push the changes to GitHub.
 
@@ -47,6 +47,21 @@ Import each CSV file into its corresponding SQL table.
 
 ## Run the Code
 
-`psql -U postgres -d employee -f schema.sql`
+1.  To create a populate the tables:
+    - `psql -U postgres -d employee -f schema.sql`
 
-`psql -h localhost -U postgres -d employee`
+2. To connect to the database:
+    - `psql -h localhost -U postgres -d employee`
+
+3. Enter postgres password:
+
+4. To view all tables in database:
+    - `\dt`
+
+5. To view tables contents:
+    - `SELECT * FROM departments;`
+    - `SELECT * FROM dept_emp;`
+    - `SELECT * FROM dept_manager;`
+    - `SELECT * FROM employees;`
+    - `SELECT * FROM salaries;`
+    - `SELECT * FROM titles;`
