@@ -6,11 +6,11 @@
 2. [File Structure](#file-structure)
 3. [Before You Begin](#before-you-begin)
 4. [Instructions](#instructions)
-    5. [Part 1: Analyze and Explore the Climate Data](#part-1-analyze-and-explore-the-climate-data)
-        6. [Precipitation Analysis](#precipitation-analysis)
-        7. [Station Analysis](#station-analysis)
-    8. [Part 2: Design Your Climate App](#part-2-design-your-climate-app)
-    9. [Hints](#hints)
+    - [Part 1: Analyze and Explore the Climate Data](#part-1-analyze-and-explore-the-climate-data)
+        - [Precipitation Analysis](#precipitation-analysis)
+        - [Station Analysis](#station-analysis)
+    - [Part 2: Design Your Climate App](#part-2-design-your-climate-app)
+    - [Hints](#hints)
 
 ## Run The Code
 Steps to run assignment.
