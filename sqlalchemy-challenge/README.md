@@ -20,8 +20,12 @@ Steps to run assignment.
 sqlalchemy-challenge/
 │
 ├── SurfsUp/
-│   └── app.py
-│
+│   ├── app.py
+│   └── climate_starter.ipynb
+│   └── Resources/
+│       ├── hawaii.sqlite
+│       └── hawaii_measurements.csv
+│       └── hawaii_stations.csv
 └── README.md
 ```
 
