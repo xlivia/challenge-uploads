@@ -1,13 +1,11 @@
 # Import the dependencies.
 import datetime as dt
 import numpy as np
-import pandas as pd
-import sqlalchemy
 import json
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
-from flask import Flask, jsonify
+from flask import Flask
 from dateutil.relativedelta import relativedelta
 
 #################################################
@@ -28,38 +26,23 @@ Station = Base.classes.station
 
 # Create our session (link) from Python to the DB
 session = Session(engine)
-#session.close()
 
 #################################################
 # Flask Setup
 #################################################
 
 app = Flask(__name__)
-#app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///Resources/hawaii.sqlite"
-#app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-#db = SQLAlchemy(app)
 
 #################################################
 # Flask Routes
 #################################################
 
 @app.route('/favicon.ico')
-def favicon(): return ''
-def favicon(): return jsonify({'status': 404, 'message': 'File not found'}), 404
+def favicon():
+    return ''
 
 # Start at the homepage and list all the available routes.
 @app.route("/")
-#def home():
-#    return (
-#        f"Welcome to the Hawaii climate API!<br/>"
-#        f"Available routes:<br/>"
-#        f"/api/v1.0/precipitation<br/>"
-#        f"/api/v1.0/stations<br/>"
-#        f"/api/v1.0/tobs<br/>"
-#        f"/api/v1.0/&lt;start&gt;<br/>"
-#        f"/api/v1.0/&lt;start&gt;/&lt;end&gt;<br/>"
-#    ), 200, {'Content-Type': 'text/html'}
-
 def home():
     return (
         f"<h1>Welcome to the Hawaii climate API!<h1>"
@@ -82,7 +65,6 @@ def precipitation():
     for date, prcp in results:
         prcp_data[date] = prcp
     session.close()
-    #return jsonify(prcp_data)
     return json.dumps(prcp_data, indent=4), 200, {'Content-Type': 'application/json'}
 
 @app.route("/api/v1.0/stations")
@@ -92,7 +74,6 @@ def stations():
     # Convert list of tuples into normal list
     stations = list(np.ravel(results))
     session.close()
-    #return jsonify(stations)
     return json.dumps(stations, indent=4), 200, {'Content-Type': 'application/json'}
 
 # Define the route and function
@@ -115,21 +96,7 @@ def tobs():
         tobs_list.append(tobs_dict)
     session.close()
     # Return the JSON representation of the list
-    #return jsonify(tobs_list)
     return json.dumps(tobs_list, indent=4), 200, {'Content-Type': 'application/json'}
-
-#def tobs():
-#    session = Session(engine)
-#    last_date = session.query(Measurement.date).order_by(Measurement.date.desc()).first()[0]
-#    year_ago = dt.datetime.strptime(last_date, '%Y-%m-%d') - dt.timedelta(days=365)
-#    results = session.query(Measurement.date, Measurement.tobs).filter(Measurement.date >= year_ago).all()
-#    session.close()
-#    tobs_data = []
-#    for date, tobs in results:
-#        tobs_dict = {}
-#        tobs_dict[date] = tobs
-#        tobs_data.append(tobs_dict)
-#    return jsonify(tobs_data)
 
 # define function to calculate TMIN, TAVG, and TMAX for a given date range
 def calc_temps(start_date, end_date=None):
@@ -144,14 +111,11 @@ def calc_temps(start_date, end_date=None):
         start_date = end_date - relativedelta(years=1)
         results = session.query(func.min(Measurement.tobs), func.avg(Measurement.tobs), func.max(Measurement.tobs))\
             .filter(Measurement.date >= start_date).filter(Measurement.date <= end_date).all()
-    # close session
-    #session.close()
     # convert results to a list
     temp_list = list(np.ravel(results))
     # close session
     session.close()
     # return results as a JSON object
-    #return jsonify(temp_list)
     return json.dumps(temp_list, indent=4), 200, {'Content-Type': 'application/json'}
 
 # create Flask routes
@@ -168,4 +132,3 @@ def temp_range_start_end(start, end):
 # run app if script is executed
 if __name__ == '__main__':
     app.run()
-    #app.run(debug=True)
