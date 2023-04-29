@@ -13,7 +13,12 @@
     - [Hints](#hints)
 
 ## Run The Code
-Steps to run assignment.
+1. In the `sqlalchemy/SurfsUp/` directory run:
+    - `python app.py`
+2. `ctrl+click the localhost link` or `copy and paste the host link into your brower while app is running`
+3. Navigate to your browser.
+4. Click on the available route links to see the data and navigate back with the back button to go back to the previous home page.
+    - `ctrl + click` opens each of the links in a new tab.
 
 ## File Structure
 ```
