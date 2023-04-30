@@ -9,3 +9,4 @@
 6. Module 6: [python-api-challenge](https://github.com/xlivia/challenge-uploads/tree/main/python-api-challenge)
 7. Module 9: [sql-challenge](https://github.com/xlivia/challenge-uploads/tree/main/sql-challenge)
 8. Module 10: [sqlalchemy-challenge](https://github.com/xlivia/challenge-uploads/tree/main/sqlalchemy-challenge)
+9. Module 11: [webscraping-challenge](https://github.com/xlivia/challenge-uploads/tree/main/webscraping-challenge)
