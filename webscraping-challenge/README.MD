@@ -2,13 +2,10 @@
 ## UofT Data Analytics Bootcamp Module 11 Challenge
 
 ### Table of Contents
-1. [Run The Code](#run-the-code)
-2. [File Structure](#file-structure)
-3. [Instructions](#instructions)
+1. [File Structure](#file-structure)
+2. [Instructions](#instructions)
     - [Part 1: Mars News](#part-1-scrape-titles-and-preview-text-from-mars-news)
     - [Part 2: Mars Weather](#part-2-scrape-and-analyze-mars-weather-data)
-
-## Run The Code
 
 ## File Structure
 ```
@@ -16,6 +13,8 @@ webscraping-challenge/
 ├── chromedriver/
 │   ├── chromedriver.exe
 │   └── LICENSE.chromedriver
+├── resources/
+│   └── mars_weather_data.csv
 ├── part_1_mars_news.ipynb
 ├── part_2_mars_weather.ipynb
 └── README.md
