@@ -11,6 +11,15 @@
 ## Run The Code
 
 ## File Structure
+```
+webscraping-challenge/
+├── chromedriver/
+│   ├── chromedriver.exe
+│   └── LICENSE.chromedriver
+├── part_1_mars_news.ipynb
+├── part_2_mars_weather.ipynb
+└── README.md
+```
 
 ## Instructions
 ### Part 1: Scrape Titles and Preview Text from Mars News
