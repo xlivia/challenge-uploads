@@ -2,6 +2,7 @@
 ## UofT Data Analytics Bootcamp Module 12 Challenge
 
 ### Table of Contents
+1. [Installations](#installations)
 1. [File Structure](#file-structure)
 2. [Instructions](#instructions)
     - [Part 1](#part-1-database-and-jupyter-notebook-set-up)
