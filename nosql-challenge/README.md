@@ -18,6 +18,13 @@ nosql-challenge/
 └── README.md
 ```
 
+## Installations
+1. Install MongoDB Compass
+2. Install MongoDB Tools
+3. Install `mongoimport`command
+4. Open MongoDB Compass and start a connection and keep in running
+5. Open terminal and run `mongoimport --drop --db uk_food --collection establishments --file establishments.json`
+
 ## Instructions
 The UK Food Standards Agency evaluates various establishments across the United Kingdom, and gives them a food hygiene rating.
 You've been contracted by the editors of a food magazine, Eat Safe, Love, to evaluate some of the ratings data in order to help their journalists and food critics decide where to focus future articles.
