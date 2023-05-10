@@ -10,7 +10,7 @@
 
 ## File Structure
 ```
-webscraping-challenge/
+nosql-challenge/
 ├── Resources/
 │   └── establishments.json
 ├── NoSQL_analysis_starter.ipynb
