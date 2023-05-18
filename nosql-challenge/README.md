@@ -24,7 +24,7 @@ nosql-challenge/
 2. Install MongoDB Tools
 3. Install `mongoimport`command
 4. Open MongoDB Compass and start a connection and keep in running
-5. Open terminal and run `mongoimport --drop --db uk_food --collection establishments --file establishments.json`
+5. Open terminal and run `mongoimport --drop --db uk_food --collection establishments --file Resources/establishments.json --jsonArray mongodb://localhost:27017`
 
 ## Instructions
 The UK Food Standards Agency evaluates various establishments across the United Kingdom, and gives them a food hygiene rating.
