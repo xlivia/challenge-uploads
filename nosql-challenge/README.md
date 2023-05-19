@@ -3,8 +3,8 @@
 
 ### Table of Contents
 1. [Installations](#installations)
-1. [File Structure](#file-structure)
-2. [Instructions](#instructions)
+2. [File Structure](#file-structure)
+3. [Instructions](#instructions)
     - [Part 1](#part-1-database-and-jupyter-notebook-set-up)
     - [Part 2](#part-2-update-the-database)
     - [Part 3](#part-3-exploratory-analysis)
