@@ -11,3 +11,4 @@
 8. Module 10: [sqlalchemy-challenge](https://github.com/xlivia/challenge-uploads/tree/main/sqlalchemy-challenge)
 9. Module 11: [webscraping-challenge](https://github.com/xlivia/challenge-uploads/tree/main/webscraping-challenge)
 10. Module 12: [nosql-challenge](https://github.com/xlivia/challenge-uploads/tree/main/nosql-challenge)
+11. Module 15: [leaflet-challenge](https://github.com/xlivia/challenge-uploads/tree/main/leaflet-challenge)
